@@ -3,8 +3,10 @@ import { SafeAreaView } from "react-native";
 import store from "../../store";
 import { styles } from "./styles";
 import utils from "../../utils";
+import { observer } from "mobx-react";
 
-export default function MediaLibrary(props) {
+export default observer(MediaLibrary);
+function MediaLibrary(props) {
   const headerTitle = "Media Library";
   const { isInternet } = store.General;
 

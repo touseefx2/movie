@@ -3,8 +3,10 @@ import { SafeAreaView } from "react-native";
 import store from "../../store";
 import { styles } from "./styles";
 import utils from "../../utils";
+import { observer } from "mobx-react";
 
-export default function More(props) {
+export default observer(More);
+function More(props) {
   const headerTitle = "More";
   const { isInternet } = store.General;
 

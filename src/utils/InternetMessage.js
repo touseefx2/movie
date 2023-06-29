@@ -3,7 +3,7 @@ import { View, Text } from "react-native";
 import theme from "../theme/index";
 import { responsiveFontSize } from "react-native-responsive-dimensions";
 
-export default InternetMessage;
+export default memo(InternetMessage);
 function InternetMessage(props) {
   const color = props.color || "red";
   const title = props.headerTitle || "";

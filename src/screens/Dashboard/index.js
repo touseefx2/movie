@@ -3,8 +3,10 @@ import { SafeAreaView } from "react-native";
 import { styles } from "./styles";
 import store from "../../store";
 import utils from "../../utils";
+import { observer } from "mobx-react";
 
-export default function Dashboard(props) {
+export default observer(Dashboard);
+function Dashboard(props) {
   const headerTitle = "Dashboard";
   const { isInternet } = store.General;
 
