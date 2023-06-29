@@ -6,7 +6,7 @@ import {
   responsiveFontSize,
 } from "react-native-responsive-dimensions";
 import theme from "../../../../theme";
-import ProgressiveImage from "@freakycoder/react-native-progressive-fast-image";
+import ProgressiveFastImage from "@freakycoder/react-native-progressive-fast-image";
 
 export default memo(Cards);
 function Cards({ item, isSearchBar, searchQuery, goToMovieDetail }) {
@@ -32,7 +32,7 @@ function Cards({ item, isSearchBar, searchQuery, goToMovieDetail }) {
           },
         ]}
       >
-        <ProgressiveImage
+        <ProgressiveFastImage
           style={styles.image}
           source={{ uri: photoUri }}
           loadingImageStyle={styles.imageLoader}
@@ -68,7 +68,7 @@ function Cards({ item, isSearchBar, searchQuery, goToMovieDetail }) {
             },
           ]}
         >
-          <ProgressiveImage
+          <ProgressiveFastImage
             style={styles.image}
             source={{ uri: photoUri }}
             loadingImageStyle={styles.imageLoader}
