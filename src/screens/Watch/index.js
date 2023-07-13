@@ -74,15 +74,18 @@ function Watch(props) {
     attemptToGetMovies();
   }, []);
 
-  const goToMovieDetail = (movieId, image, name, release_date, overview) => {
-    props.navigation.navigate("MovieDetail", {
-      movieId,
-      image,
-      name,
-      release_date,
-      overview,
-    });
-  };
+  const goToMovieDetail = useCallback(
+    (movieId, image, name, release_date, overview) => {
+      props.navigation.navigate("MovieDetail", {
+        movieId,
+        image,
+        name,
+        release_date,
+        overview,
+      });
+    },
+    []
+  );
 
   const renderMovies = useCallback(
     ({ item }) => (

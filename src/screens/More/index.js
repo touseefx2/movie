@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { SafeAreaView } from "react-native";
 import store from "../../store";
 import { styles } from "./styles";
@@ -9,6 +9,10 @@ export default observer(More);
 function More(props) {
   const headerTitle = "More";
   const { isInternet } = store.General;
+
+  useEffect(() => {
+    console.log("more");
+  }, []);
 
   return (
     <>

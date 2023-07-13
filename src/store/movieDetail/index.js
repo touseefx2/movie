@@ -55,7 +55,7 @@ class movieDetail {
       .catch((err) => {
         this.setLoader(false);
         const msg = err.response.data.message || err.response.status || err;
-        // console.log(`Error in attemptToGetSpecificMovieDetail: `, msg);
+        console.log(`Error in attemptToGetSpecificMovieDetail: `, msg);
         if (msg == 503 || msg == 500) {
           Alert.alert("", "Server not response");
           return;
